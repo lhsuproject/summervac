@@ -1,0 +1,107 @@
+@import url("https://db.onlinewebfonts.com/c/47cd35de45fdb1f8f125c14e1bca10c6?family=Komika+Title+-+Paint");
+@import url("https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/*mainContainer*/
+.mainContainer {
+    width: 100vw;
+    overflow: hidden;
+}
+
+/*mainCate*/
+.mainCate {
+    width: 50%;
+    height: 960px;
+    background-color: #F3D25D;
+    float: left;
+}
+
+.homeImg_Home {
+    height: 100px;
+    object-fit: cover;
+    border: none;
+    background-color: #F3D25D;
+    margin: 0 auto;
+    display: block;
+    margin-top: 70px;
+    margin-bottom: 30px;;
+}
+
+.mainCate_Menu {
+    font-family: "Komika Title - Paint";
+    color: black;
+    text-align: center;
+}
+
+.subCategoryNav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.subOne {
+    margin-top: 16px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subCate_Menu {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+/*mainPoster*/
+.mainPoster {
+    width: 50%;
+    height: 960px;
+    float: right;
+    background-image: url('img/realPoster.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.dim{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    color: rgba(0, 0, 0, 0.0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dim:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 300ms;
+    color:#fff;
+    font-size: 30px;
+    font-family: "Komika Title - Paint";
+    color: rgba(216,216,216,1);
+    text-shadow: 4px 5px 1px rgba(0, 0, 0, 1);
+}
+
+
+/*-------------------------위는 수정 금지--------------------------*/
+/*-----------------------여기서부터 수정가능-----------------------*/
+
+/*-----------------------아래서부터 수정금지-----------------------*/
+
+@media screen and (max-width : 768px) {
+    .mainPoster{
+        display: none;
+    }
+
+    .mainCate{
+        width: 100vw;
+        display: block;
+    }
+}

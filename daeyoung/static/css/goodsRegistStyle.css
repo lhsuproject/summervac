@@ -1,0 +1,53 @@
+.regist_height {
+    height: 200px !important;
+}
+
+.regist_text{
+    font-size: 80px !important;
+}
+
+li{
+    display: flex;
+    padding-bottom: 30px;
+}
+
+p{
+    font-size: 35px !important;
+    align-items: center;
+    margin: auto 0px;
+}
+
+input{
+    background-color: #d9d9d9;
+    height: 70px;
+    width: 858px;
+    margin-left: auto;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 35px;
+}
+
+.registInputContainer{
+    width: 1050px;
+    height: 570px;
+    margin: auto;
+    margin-bottom: 70px;
+
+}
+
+.registButton{
+    font-size: 60px !important;
+    width: 236px;
+    height: 97px;
+    background-color: #F3D25D;
+    border-radius: 10px;
+    border: none;
+    margin-left: 810px;
+}
+
+.registContainer{
+    margin: auto;
+    width: 1050px;
+    height: 870px;
+}

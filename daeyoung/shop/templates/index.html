@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/homeIMG.png' %}" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <!--This is Category Container-->
+        <div class="mainContainer">
+            <!--MainCategory-->
+            <div class="mainCate">
+                <h1>
+                    <img src="{% static 'img/homeIMG.png' %}" alt="btnImages" class="homeImg_Home">
+                </h1>
+                <nav class="mainCategoryNav">
+                    <li class="mainCate_Menu">
+                        <a class="textWhite" href="{% url 'shop' %}">SHOP</a>
+                    </li>
+                    <!--여기는 내가 추가한거임-->
+                    {% if user.is_authenticated %}
+                    <li class="mainCate_Menu">
+                        <a class="textWhite" href="{% url 'goodsRegist' %}">Regist</a>
+                    </li>
+                    {%endif%}
+                    <!--여기까지-->
+                    <li class="mainCate_Menu">
+                        <a class="textWhite" href="#">EVENT</a>
+                    </li>
+                    <li class="mainCate_Menu">
+                        <a class="textWhite" href="{% url 'about' %}">ABOUT</a>
+                    </li>
+                </nav>
+
+                <!--SubCategory-->
+                <nav class="subCategoryNav">
+                    <nav class="subOne">
+                        {% if user.is_authenticated %}
+                            <li class="subCate_Menu">
+                                <a href="{% url 'logout' %}" class="textBlack">LOGOUT</a>
+                            </li>
+                                <img src="{% static 'img/dot1.png'%}" alt="dot">
+                        {%else%}
+                            <li class="subCate_Menu">
+                                <a href="{% url 'login' %}" class="textBlack">LOGIN</a>
+                            </li>
+                            <img src="{% static 'img/dot1.png'%}" alt="dot">
+                        {%endif%}
+                        <li class="subCate_Menu">
+                            <a href="{% url 'regist' %}" class="textBlack">JOIN</a>
+                        </li>
+
+                        <img src="{% static 'img/dot1.png'%}" alt="dot">
+
+                        <li class="subCate_Menu">
+                            <a href="{% url 'my'  %}" class="textBlack">MYPAGE</a>
+                        </li>
+
+                        <img src="{% static 'img/dot1.png'%}" alt="dot">
+
+                        <li class="subCate_Menu">
+                            <a href="{% static ''%}../cart/cart.html" class="textBlack">CART</a>
+                        </li>
+                    </nav>
+
+                    <nav class="subOne">
+                        <li class="subCate_Menu">
+                            <a href="https://www.instagram.com/likelion_hsu/" class="textBlack">INSTAGRAM</a>
+                        </li>
+
+                        <img src="{% static 'img/dot1.png'%}" alt="dot">
+
+                        <li class="subCate_Menu">
+                            <a href="https://cafe.naver.com/likelionhs" class="textBlack">NAVERCAFE</a>
+                        </li>
+                    </nav>
+                </nav>
+            </div>
+
+            <!--MainPosterSection-->
+            <div class="mainPoster">
+                <a href="#" class="dim">more Info</a>
+            </div>
+        </div>
+
+        <!--this is footer Section-->
+        <footer class="baseFooter">
+            <div class="mainFooter">
+                <div class="about">
+                    <span class="menuTitle">ABOUT</span>
+
+                    <li class="subMenuBtn">
+                        <a href="#">EVENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="#">LIKELION</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="#">
+                            SHOP
+                        </a>
+                    </li>
+                </div>
+                <div class="social">
+                    <span class="menuTitle">SOCIAL</span>
+
+                    <li class="subMenuBtn">
+                        <a href="https://cafe.naver.com/likelionhs">NAVERCAFE</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="https://www.instagram.com/likelion_hsu/">INSTAGRAM</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="https://blog.naver.com/likelionhsu">BLOG</a>
+                    </li>
+                </div>
+                <div class="help">
+                    <span class="menuTitle">HELP</span>
+
+                    <li class="subMenuBtn">
+                        <a href="#">FAQ</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        {% if user.is_authenticated %}
+                        <a href="#">MYPAGE</a>
+                        {%endif%}
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="#">Q&A</a>
+                    </li>
+                </div>
+                <div class="info">
+                    <span class="menuTitle">INFO</span>
+
+                    <li class="subMenuBtn">
+                        <a href="#">AGREEMENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href="#">PRIVACYPOLICY</a>
+                    </li>
+                </div>
+                <div class="copyRight">
+                    <span class="subMenuBtn">
+                        LIKELION_HSU 멋쟁이사자처럼 한서대학교<br>
+                        CS CENTER<br>
+                        eodud6411@likelion.org<br>
+                        국민은행944502-00-186510<br>
+                        010 9550 6410 (11:00~17:30)
+                        <br>
+                        <br>
+                        <br>
+                        Design by PDY & JHJ & JMK
+                    </span>
+                </div>
+            </div>
+
+            <div class="footerLogo">
+                <div class="footerBtn">
+                    <button class="footerTitle textWhite">LHSU</button>
+                    <img src="{% static 'img/btMain.png'%}" alt="Imagesbtn" class="footerMainImg">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPage</title>
+    <link rel="stylesheet" href="{% static 'css/myPageStyle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/homeIMG.png' %}" type="image/x-icon">
+</head>
+<body>
+    <!--이부분은 홈화면을 제외한 HTML에 들어가는 부분-->
+    <div class = "container">
+        <div class = "baseTop">
+            <div type="li" class="homeImg">
+                <a href = "{% url 'home' %}">
+                    <img src="{% static 'img/homeIMG.png' %}" alt="btnImages" class="homeImg">
+                </a>
+            </div>
+
+            <nav class="topBtn_div">
+                <li class="topBtn_4 topBtn textBlack">
+                    <a href = "#">CART</a>
+                </li>
+                <li class="topBtn_6 topBtn textBlack">
+                    <a href = "#">MYPAGE</a>
+                </li>
+                <li class="topBtn_4 topBtn textBlack">
+                    <a href = "#">JOIN</a>
+                </li>
+                <li class="topBtn_5 topBtn textBlack">
+                    <a href = "#">LOGIN</a>
+                </li>
+            </nav>
+        </div>
+
+        <div class = "baseTitle">
+            <div class = "base_div">
+                <span class="base">MY PAGE</span>
+            </div>
+        </div>
+
+        <!--여기에 각자 맡은 컨텐츠 삽입-->
+        <div class = "contentSpace">
+            <!--this space is contents space.-->
+            <div class = "myInfo">
+                <div>
+                    <img class = "profilImg" src="{% static 'img/BDNSLION_G-removebg-preview.png' %}" alt="profilImg">
+                </div>
+                <div class = "myInfoText">
+                    <li class = "myInfoBox subTextBlack"><p class = "ifSub">이름: </p><p>{{ name }}</p></li>
+                    <li class = "myInfoBox subTextBlack"><p class = "ifSub">파트: </p><p>{{ part }}</p></li>
+                    <li class = "myInfoBox subTextBlack"><p class = "ifSub">학번: </p><p>{{ hakbun }}</p></li>
+                </div>
+            </div>
+            <div class = "cartBox">
+
+            </div>
+        </div>
+        
+        <!--This is footerSection-->
+        <footer class = "baseFooter">
+            <div class = "mainFooter">
+                <div class = "about">
+                    <span class="menuTitle">ABOUT</span>
+
+                    <li class="subMenuBtn">
+                        <a href = "#">EVENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">LIKELION</a></li>
+                    <li class="subMenuBtn">
+                        <a href = "#">
+                            SHOP
+                        </a>
+                    </li>
+                </div>
+                <div class = "social">
+                    <span class="menuTitle">SOCIAL</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "https://cafe.naver.com/likelionhs">NAVERCAFE</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "https://www.instagram.com/likelion_hsu/">INSTAGRAM</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "https://blog.naver.com/likelionhsu">BLOG</a>
+                    </li>
+                </div>
+                <div class = "help">
+                    <span class="menuTitle">HELP</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "#">FAQ</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">MYPAGE</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">Q&A</a>
+                    </li>
+                </div>
+                <div class = "info">
+                    <span class="menuTitle">INFO</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "#">AGREEMENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">PRIVACYPOLICY</a>
+                    </li>
+                </div>
+                <div class="copyRight">
+                    <span class = "subMenuBtn">
+                        LIKELION_HSU 멋쟁이사자처럼 한서대학교<br>
+                        CS CENTER<br>
+                        eodud6411@likelion.org<br>
+                        국민은행944502-00-186510<br>
+                        010 9550 6410 (11:00~17:30)
+                        <br>
+                        <br>
+                        <br>
+                        Design by PDY & JHJ & JMK
+                    </span>
+                </div>
+            </div>
+
+            <div class = "footerLogo">
+                <div class="footerBtn">
+                    <button class="footerTitle textWhite">LHSU</button>
+                    <img src=" {% static 'img/btMain.png' %}" alt="Imagesbtn" class="footerMainImg">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

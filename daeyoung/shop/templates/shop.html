@@ -1,0 +1,194 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/homeIMG.png' %}" type="image/x-icon">
+</head>
+<body>
+    <div class = "container">
+        <div class = "baseTop">
+            <div type="li" class="homeImg">
+                <a href = "{% url 'home' %}">
+                    <img src="{% static 'img/homeIMG.png' %}" alt="btnImages" class="homeImg">
+                </a>
+            </div>
+
+            <nav class="topBtn_div">
+                <li class="topBtn_4 topBtn textBlack">
+                    <a href = "#">CART</a>
+                </li>
+                <li class="topBtn_6 topBtn textBlack">
+                    <a href = "#">MYPAGE</a>
+                </li>
+                <li class="topBtn_4 topBtn textBlack">
+                    <a href = "#">JOIN</a>
+                </li>
+                <li class="topBtn_5 topBtn textBlack">
+                    <a href = "#">LOGIN</a>
+                </li>
+            </nav>
+        </div>
+
+        <div class = "baseTitle">
+            <div class = "base_div">
+                <span class="base">SHOP</span>
+            </div>
+        </div>
+
+        <!--여기에 각자 맡은 컨텐츠 삽입-->
+        <div class = "contentSpace">
+            <!--this space is contents space.-->
+
+            <div class="product-list">
+                <li class="product">
+                     <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img1"></button>
+                     <a href="#"><br>보호 스프레이<br>PIZZA FREE</a>
+                     <p class="product-price">$13,900</p>
+                </li>
+
+                <li class="product">
+                    <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img2"></button>
+                    <a href="#"><br>보호 스프레이<br>PIZZA FREE</a>
+                    <p class="product-price">$13,900</p>
+                </li>
+
+                <li class="product">
+                    <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img3"></button>
+                    <a href="#"><br>보호 스프레이<br>PIZZA FREE</a>
+                    <p class="product-price">$13,900</p>
+                </li>
+
+                <li class="product">
+                    <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img4"></button>
+                    <a href="#"><br>보호 스프레이<br>PIZZA FREE</a>
+                    <p class="product-price">$13,900</p>
+                </li>
+
+                
+                    {% for item in items %}
+                    <li class="product">
+                        {% if item.image %}
+                    
+                            <h1><a href="{% url 'detail' item.id %}"><img src="{{ item.image.url }}" alt="" height="400"></a></h1>
+                        {% endif %}
+                            <br/>
+                            <h1>{{ item.title }}</h1>
+                            <br/>
+                            <h2>$ : {{item.money}}</h2>
+                            <br/><br/>
+                    {% endfor %}
+                    </li>
+
+                <!-- 두번째 줄
+                <li class="product">
+                    <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img1"></button>
+                    <a href="#"><br>PROTECTION SPRAY<br>BUG FREE</a>
+                    <p class="product-price">$13,900</p>
+               </li>
+
+               <li class="product">
+                   <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img2"></button>
+                   <a href="#"><br>PROTECTION SPRAY<br>BUG FREE</a>
+                   <p class="product-price">$13,900</p>
+               </li>
+
+               <li class="product">
+                   <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img3"></button>
+                   <a href="#"><br>PROTECTION SPRAY<br>BUG FREE</a>
+                   <p class="product-price">$13,900</p>
+               </li>
+
+               <li class="product">
+                   <button type="button" ><img src="{% static 'img/product1.png' %}" class="product-img4"></button>
+                   <a href="#"><br>PROTECTION SPRAY<br>BUG FREE</a>
+                   <p class="product-price">$13,900</p>
+               </li> -->
+                <div class="clearfix"></div>
+            </div>
+
+
+        </div>
+
+        <footer class = "baseFooter">
+            <div class = "mainFooter">
+                <div class = "about">
+                    <span class="menuTitle">ABOUT</span>
+
+                    <li class="subMenuBtn">
+                        <a href = "#">EVENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">LIKELION</a></li>
+                    <li class="subMenuBtn">
+                        <a href = "#">
+                            SHOP
+                        </a>
+                    </li>
+                </div>
+                <div class = "social">
+                    <span class="menuTitle">SOCIAL</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "https://cafe.naver.com/likelionhs">NAVERCAFE</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "https://www.instagram.com/likelion_hsu/">INSTAGRAM</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "https://blog.naver.com/likelionhsu">BLOG</a>
+                    </li>
+                </div>
+                <div class = "help">
+                    <span class="menuTitle">HELP</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "#">FAQ</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">MYPAGE</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">Q&A</a>
+                    </li>
+                </div>
+                <div class = "info">
+                    <span class="menuTitle">INFO</span>
+    
+                    <li class="subMenuBtn">
+                        <a href = "#">AGREEMENT</a>
+                    </li>
+                    <li class="subMenuBtn">
+                        <a href = "#">PRIVACYPOLICY</a>
+                    </li>
+                </div>
+                <div class="copyRight">
+                    <span class = "subMenuBtn">
+                        LIKELION_HSU 멋쟁이사자처럼 한서대학교<br>
+                        CS CENTER<br>
+                        eodud6411@likelion.org<br>
+                        국민은행944502-00-186510<br>
+                        010 9550 6410 (11:00~17:30)
+                        <br>
+                        <br>
+                        <br>
+                        Design by PDY & JHJ & JMK
+                    </span>
+                </div>
+            </div>
+
+            <div class = "footerLogo">
+                <div class="footerBtn">
+                    <button class="footerTitle textWhite">LHSU</button>
+                    <img src="{% static 'img/btMain.png' %}" alt="Imagesbtn" class="footerMainImg">
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

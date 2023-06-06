@@ -1,0 +1,29 @@
+.contentSpace {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.myInfo {
+    width: 90vw;
+    border: solid 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    margin-bottom: 50px;
+}
+
+.profilImg {
+    width: 200px;
+    float: left;
+    margin-right: 40px;
+}
+
+.myInfoBox {
+    width: 250px;
+}
+
+.ifSub {
+    float: left;
+}

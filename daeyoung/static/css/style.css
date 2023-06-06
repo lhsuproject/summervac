@@ -1,0 +1,199 @@
+@import url("https://db.onlinewebfonts.com/c/47cd35de45fdb1f8f125c14e1bca10c6?family=Komika+Title+-+Paint");
+@import url("https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+/*body*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.container {
+    width: 100vw;
+}
+
+button {
+    cursor: pointer;
+}
+
+.textBlack {
+    color: black;
+    /*#222 ~ #333*/
+    /* color: rgba(0,0,0,1); */
+    font-family: Londrina Solid;
+    font-size: 36px;
+}
+
+.subTextBlack {
+    color: black;
+    font-family: Lato;
+    font-size: 30px;
+}
+
+.textWhite {
+    /* color: rgba(216,216,216,1); */
+    color: white;
+    text-shadow: 4px 5px 1px rgba(0, 0, 0, 1),
+    -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    font-family: "Komika Title - Paint";
+    font-size: 80px;
+}
+
+.mainColor {
+    color: #F3D25D
+}
+
+/*baseTop*/
+/*가운데 베이스 타이틀*/
+.base {
+    font-family: "Lato";
+    font-size: 250%;
+    font-weight: bold;
+}
+
+.base_div {
+    text-align: center;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*좌측 상당 홈 이미지*/
+.homeImg {
+    height: 100px;
+    object-fit: cover;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    float: left;
+}
+
+/*우측 상단 유저 버튼*/
+.topBtn_div {
+    width: 500px;
+    float: right;
+}
+
+.topBtn_div li {
+    float: left;
+}
+
+.topBtn {
+    margin-left: 5%;
+    border: 0;
+    background-color: white;
+    padding-right: 15%;
+    margin-top: 30px;
+}
+
+/*4글자 버튼*/
+.topBtn_4 {
+    width: 14%;
+}
+
+/*5글자 버튼*/
+.topBtn_5 {
+    width: 18%
+}
+
+/*6글자 버튼*/
+.topBtn_6 {
+    width: 22%
+}
+
+/*baseFooter*/
+.baseFooter {
+    height: 400px;
+    background-color: rgba(42, 99, 144, 1);
+    position: relative;
+    bottom: 0;
+}
+
+.mainFooter li {
+    margin-top: 4px;
+}
+
+.mainFooter li>a:hover{
+    color: #F3D25D;
+    /* font-size: 18px; */
+    transition-duration: 300ms;
+}
+
+.baseFooter a {
+    color: white;
+}
+
+.about, .social, .help, .info {
+    margin-top: 50px;
+    width: 80px;
+    float: left;
+    margin-left: 4%;;
+}
+
+.copyRight {
+    margin-top: 34px;
+    float: right;
+    margin-right: 20%;
+}
+
+.footerBtn {
+    width: 350px;
+    height: 140px;
+}
+
+.menuTitle {
+    width: 52px;
+    color: rgba(255,255,255,1);
+    font-family: Lato;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+.subMenuBtn {
+    color: rgba(255,255,255,1);
+    font-family: Lato;
+    font-weight: regular;
+    font-size: 17px;
+    text-align: left;
+    border: 0;
+    background-color: rgba(42,99,144,1);
+}
+
+.footerLogo {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.footerBtn {
+    width: 380px;
+    height: 140px;
+}
+
+.footerTitle {
+    border: 0;
+    background-color: rgba(42,99,144,1);
+    width: 218px;
+}
+
+.footerMainImg {
+    width: 128px;
+}
+
+/*contentSpace*/
+/*내부 콘텐츠를 채울 수 있는 공간입니다.*/
+.contentSpace {
+    width: 100%;
+    min-height: 300px;
+}
+
+/*-------------------------위는 수정 금지--------------------------*/
+/*-----------------------여기서부터 수정가능-----------------------*/
+
